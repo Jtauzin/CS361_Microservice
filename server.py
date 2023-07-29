@@ -12,7 +12,7 @@ while True:
 # Activate socket mode, listening on the correct port / ip address
 if mode.lower() == "socket":
     active_socket = socket.socket()
-    active_socket.bind(("192.168.50.95", 60))  # Choose your own IP and Port
+    active_socket.bind(("0.0.0.0", 60))  # Automatically sets to local ipv4
     active_socket.listen(10)
     print("server activated...")
 
