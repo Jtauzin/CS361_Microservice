@@ -17,6 +17,7 @@ countfile.close()
 ## Socket Mode
 To request data using the Socket mode, we need to request data to the IP address that the server is running on from a device on the same network. (to find out the ip address of the machine the server is running, open commandline and type 'ipconfig'. Look for the ipv4 address)
 We will need to connect to the socket at port 60, then send a command, either read or write. For read out message must say "read", to write our message must begin with "Write:" followed by the data to be written.
+
 Kotlin Example Read:
 ```Kotlin
 val socket = Socket("192.168.50.95", 60)
@@ -36,7 +37,8 @@ DOS.write(message.toByteArray())
 # Receiving Data
 
 ## Local Mode
-To obtain data from the local count operation, we need to 'listen' to the count.txt file. After we have send the filepath to count.txt, keep checking the file until the value has changed. Python Example:
+To obtain data from the local count operation, we need to 'listen' to the count.txt file. After we have send the filepath to count.txt, keep checking the file until the value has changed. 
+Python Example:
 ```Python
   while True:
       print("Waiting...")
