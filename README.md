@@ -7,6 +7,7 @@ To launch the microservice on windows, open the containing folder in command lin
 # Requesting Data
 ## Local Mode
 Local mode operates in a file called count.txt. When we request data, we need to write the filepath to the file we want the microservice to process to count.txt.
+
 Python Example:
 ```Python
 countfile = open("count.txt", "w")
@@ -38,6 +39,7 @@ DOS.write(message.toByteArray())
 
 ## Local Mode
 To obtain data from the local count operation, we need to 'listen' to the count.txt file. After we have send the filepath to count.txt, keep checking the file until the value has changed. 
+
 Python Example:
 ```Python
   while True:
@@ -54,6 +56,7 @@ This example assumes we wrote test.txt to the file, then waits for that value no
 
 ## Socket Mode
 Data from the microservice socket server comes in two forms, a confirmation message that the data was saved (for Write: functions) and the data we have stored (for read functions). Both will be received the same way. The client needs to listen to the input stream while the socket is still open, and after sending the command to the microservice.
+
 Kotlin Example:
 ```Kotlin
 //... connect to socket and send command ...
